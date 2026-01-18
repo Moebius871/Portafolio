@@ -1,6 +1,7 @@
 import Header from '../componentes/header'
 import Footer from '../componentes/footer'
 import './portafolio.css'
+import michus from '../assets/gifs/cinco.gif';
 
 function Portafolio() {
     return (
@@ -32,7 +33,7 @@ function Portafolio() {
                         <p>Crear soluciones web funcionales y visualmente atractivas.</p>
                     </div>
                 </section>
-                <img src="public/gifs/cinco.gif" alt="michus"/>
+                <img src={michus} alt="michus"/>
             </main>
 
             <Footer/>

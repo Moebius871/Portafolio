@@ -1,8 +1,8 @@
 import Header from '../componentes/header'
 import Footer from '../componentes/footer'
 import './proyectos.css'
-import uno from '../assets/1.png';
-
+import uno from '../assets/imagenes/1.png';
+import callaogil from '../assets/gifs/cuatro.gif';
 function Proyectos() {
     return (
         <>
@@ -13,7 +13,7 @@ function Proyectos() {
                     <h2>Mis Proyectos</h2>
                     <p>Aquí puedes ver algunos de los proyectos en los que he trabajado.</p>
                 </section>
-                <img src="public/gifs/cuatro.gif" alt="callaogil"/>
+                <img src={callaogil} alt="callaogil"/>
                 <section className="paneles">
                     <div className="panel">
                         <h3>Proyecto 1</h3>

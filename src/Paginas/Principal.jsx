@@ -1,6 +1,10 @@
 import Header from '../componentes/header'
 import Footer from '../componentes/footer'
 import  './principal.css'
+import FotoMija from '../assets/imagenes/uno.png';
+import dos from '../assets/gifs/dos.gif';
+import tres from '../assets/gifs/tres.gif';
+import seis from '../assets/gifs/seis.gif';
 function Principal() {
     return (
         <>
@@ -16,18 +20,18 @@ function Principal() {
         </section>
 
         <section className="foto-principal">
-            <img src="public/imagenes/uno.png" alt="Foto Mija"/>
+            <img src={FotoMija} alt="FotoMija"/>
         </section>
         </div>
             <section className="paneles">
         <div className="gif">
-            <img src="public/gifs/dos.gif" alt="gif"/>
+            <img src={dos} alt="dos"/>
         </div>
         <div className="gif">
-            <img src="public/gifs/tres.gif" alt="gif"/>
+            <img src={tres} alt="tres"/>
         </div>
         <div className="gif">
-            <img src="public/gifs/seis.gif" alt="gif"/>
+            <img src={seis} alt="seis"/>
         </div>
     </section>
 

@@ -1,6 +1,7 @@
 import Header from '../componentes/header'
 import Footer from '../componentes/footer'
 import './contactos.css'
+import malabares from '../assets/gifs/uno.gif';
 
 function Contacto() {
     return (
@@ -29,7 +30,7 @@ function Contacto() {
                         </form>
                     </div>
 
-                    <img src="public/gifs/uno.gif" alt="malabares"/>
+                    <img src={malabares} alt="malabares"/>
                 </section>
             </main>
 

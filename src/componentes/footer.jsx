@@ -1,5 +1,7 @@
 import React from 'react'
 import  './header.css'
+import GitHub from '../assets/imagenes/Icono.png';
+import OtraHija from '../assets/imagenes/dos.png';
 function Footer() {
   
   return (
@@ -8,12 +10,12 @@ function Footer() {
       <section className="pata">
             <div className="redes-sociales">
                 <a href="https://github.com/Moebius871" target="_blank" rel="noopener noreferrer">
-                    <img className="icono" src="public\imagenes\Icono.png" alt="GitHub" />
+                    <img src={GitHub} alt="GitHub" />
                 </a>
             </div>
 
             <div className="foto">
-                <img className="otra-hija" src="public\imagenes\dos.png" alt="Ilustración adicional" />
+                <img className="otra-hija" src={OtraHija} alt="Ilustración adicional" />
             </div>
 
             <div className="contactos">
