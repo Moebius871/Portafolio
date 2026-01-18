@@ -1,0 +1,160 @@
+main {
+  background-color: cyan;
+  padding: 40px 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.intro {
+  background-color: magenta;
+  padding: 40px;
+  color: #2f3640;
+  line-height: 1.5;
+  text-align: center;
+  border: 3px solid cyan;
+}
+
+.intro span {
+  color: cyan;
+}
+
+.intro button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: cyan;
+  background-color: magenta;
+  border: 2px solid cyan;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.intro button:hover {
+  background-color: cyan;
+  color: magenta;
+}
+
+.intro-foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.intro {
+  background-color: magenta;
+  padding: 40px;
+  color: #2f3640;
+  line-height: 1.5;
+  text-align: left;
+  border: 3px solid cyan;
+  flex: 1;
+}
+
+.foto-principal {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.foto-principal img {
+  max-width: 420px;
+  width: 100%;
+  border: 4px solid magenta;
+}
+
+.foto-principal img {
+  max-width: 480px;
+  width: 100%;
+  border: 4px solid magenta;
+}
+
+.paneles {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.gif {
+  background-color: magenta;
+  border: 3px solid cyan;
+  width: 300px;
+  height: 260px;        /* <-- altura fija igual para todos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.gif img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;  /* <-- evita deformación */
+}
+
+
+.intermedio {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.formulario,
+.mapa {
+  max-width: 420px;
+  width: 100%;
+}
+
+.formulario {
+  background-color: magenta;
+  padding: 30px;
+  border: 3px solid cyan;
+}
+
+.texto-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.texto-formulario input,
+.texto-formulario textarea {
+  padding: 10px;
+  border: 2px solid cyan;
+  font-family: inherit;
+}
+
+.texto-formulario button {
+  margin-top: 10px;
+  background-color: cyan;
+  color: magenta;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mapa iframe {
+  width: 100%;
+  border: 3px solid magenta;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding: 25px;
+  }
+
+  .foto-principal img {
+    max-width: 320px;
+  }
+
+  .intermedio {
+    gap: 40px;
+  }
+}
