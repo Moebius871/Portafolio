@@ -1,0 +1,24 @@
+
+.login-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, cyan, magenta);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.login-caja {
+  background-color: cyan;
+  border: 4px solid cyan;
+  padding: 40px;
+  box-shadow: 0 0 15px magenta;
+  text-align: center;
+  width: 300px;
+}
+
+.login-caja h1 {
+  color: magenta;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}

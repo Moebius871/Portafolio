@@ -1,0 +1,64 @@
+
+.registro-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, cyan, magenta);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.registro-formulario {
+  background-color: cyan;
+  border: 4px solid magenta;
+  padding: 30px 40px;
+  box-shadow: 0 0 15px cyan;
+  width: 350px;
+  text-align: center;
+}
+
+.registro-formulario h2 {
+  color: magenta;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.registro-formulario label {
+  color: magenta;
+  font-weight: bold;
+}
+
+.registro-formulario input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 2px solid cyan;
+  background-color: black;
+  color: cyan;
+  font-family: inherit;
+}
+
+.registro-formulario input:focus {
+  outline: none;
+  box-shadow: 0 0 10px cyan;
+}
+
+.registro-formulario button {
+  background-color: magenta;
+  color: black;
+  border: 2px solid cyan;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.registro-formulario button:hover {
+  background-color: cyan;
+  color: magenta;
+  box-shadow: 0 0 12px cyan;
+  transform: scale(1.05);
+}
