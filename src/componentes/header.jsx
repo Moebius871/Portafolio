@@ -1,9 +1,11 @@
 import React from 'react'
 import{ Link } from 'react-router-dom'
 import './header.css'
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 function Header() {
-  
+const { usuario, logout } = useContext(AuthContext);  
   return (
     <>
       <div className="cabecera">
@@ -19,6 +21,16 @@ function Header() {
             <Link to="/registro">Iniciar Sesion / Registrarse</Link>
           </ul>
       </nav>
+      <nav className='titulo_3'>
+        {usuario ? (
+        <>
+        <span>Hola, {usuario}</span>
+        <button onClick={logout}>Salir</button>
+        </>
+        ) : (
+        <Link to="/login">Iniciar Sesión</Link>
+        )}
+        </nav>
       </div>
     </>
   )

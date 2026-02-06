@@ -2,7 +2,11 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import "./registro.css";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
+
 function Registro() {
+const { login } = useContext(AuthContext);
 const navigate = useNavigate();
 const [datos, setDatos] = useState({
     nombre: '',
@@ -17,6 +21,7 @@ const manejoCambios = (e) => {
     })
 }
 const enviarDatos = (e) => {
+    login(datos.nombre);
     e.preventDefault();
     if(datos.nombre.length < 3){
         toast.error("Datos demasiado cortos");

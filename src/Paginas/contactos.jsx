@@ -2,6 +2,12 @@ import Header from '../componentes/header'
 import Footer from '../componentes/footer'
 import './contactos.css'
 import malabares from '../assets/gifs/uno.gif';
+import { useRef } from "react";
+
+const nombreRef = useRef(null);
+useEffect(() => {
+  nombreRef.current.focus();
+}, []);
 
 function Contacto() {
     return (
@@ -18,8 +24,7 @@ function Contacto() {
                     <div className="formulario">
                         <form className="texto-formulario">
                             <label htmlFor="nombre">Nombre</label>
-                            <input id="nombre" type="text" placeholder="Pon tu nombre aquí" />
-
+                            <input ref={nombreRef} id="nombre" type="text" placeholder="Pon tu nombre aquí"/>
                             <label htmlFor="correo">Correo electrónico</label>
                             <input id="correo" type="email" placeholder="Pon tu correo aquí" />
 

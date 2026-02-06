@@ -2,8 +2,12 @@ import Header from '../componentes/header'
 import Footer from '../componentes/footer'
 import './portafolio.css'
 import michus from '../assets/gifs/cinco.gif';
+import { useEffect } from "react";
 
 function Portafolio() {
+    useEffect(() => {
+        document.title = "Portafolio - Mi Sitio Web";
+    }, []);
     return (
         <>
             <Header/>
