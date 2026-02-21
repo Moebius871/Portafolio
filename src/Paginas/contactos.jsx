@@ -1,47 +1,85 @@
 import Header from '../componentes/header'
 import Footer from '../componentes/footer'
 import './contactos.css'
-import malabares from '../assets/gifs/uno.gif';
-import { useRef } from "react";
-
-const nombreRef = useRef(null);
-useEffect(() => {
-  nombreRef.current.focus();
-}, []);
+import malabares from '../assets/gifs/uno.gif'
+import { useRef, useEffect } from "react"
+import Swal from "sweetalert2"
+import "sweetalert2/dist/sweetalert2.min.css"
 
 function Contacto() {
-    return (
-        <>
-            <Header/>
 
-            <main>
-                <section className="intro">
-                    <h2>Contáctame</h2>
-                    <p>Si quieres hablar <span>o hacer panas (ﾉ･_-)☆</span> conmigo, llena el siguiente formulario.</p>
-                </section>
+  const nombreRef = useRef(null)
 
-                <section className="intermedio">
-                    <div className="formulario">
-                        <form className="texto-formulario">
-                            <label htmlFor="nombre">Nombre</label>
-                            <input ref={nombreRef} id="nombre" type="text" placeholder="Pon tu nombre aquí"/>
-                            <label htmlFor="correo">Correo electrónico</label>
-                            <input id="correo" type="email" placeholder="Pon tu correo aquí" />
+  useEffect(() => {
+    if (nombreRef.current) {
+      nombreRef.current.focus()
+    }
+  }, [])
 
-                            <label htmlFor="asunto">Mensaje</label>
-                            <textarea id="asunto" placeholder="Escribe tu mensaje aquí..."></textarea>
+  const handleSubmit = (e) => {
+    e.preventDefault()
 
-                            <button type="submit">Enviar</button>
-                        </form>
-                    </div>
+    Swal.fire({
+      title: "¡Mensaje enviado!",
+      text: "Gracias por contactarme ( •̀ᴗ•́ )و ̑̑",
+      width: 400,
+      color: "cyan",
+      background: "#fff url('src/assets/gifs/lion.gif') no-repeat center",
+    })
+  }
 
-                    <img src={malabares} alt="malabares"/>
-                </section>
-            </main>
+  return (
+    <>
+      <Header />
 
-            <Footer/>
-        </>
-    )
+      <main>
+        <section className="intro">
+          <h2>Contáctame</h2>
+          <p>
+            Si quieres hablar <span>o hacer panas (ﾉ･_-)☆</span> conmigo,
+            llena el siguiente formulario.
+          </p>
+        </section>
+
+        <section className="intermedio">
+          <div className="formulario">
+            <form className="texto-formulario" onSubmit={handleSubmit}>
+              
+              <label htmlFor="nombre">Nombre</label>
+              <input
+                ref={nombreRef}
+                id="nombre"
+                type="text"
+                placeholder="Pon tu nombre aquí"
+                required
+              />
+
+              <label htmlFor="correo">Correo electrónico</label>
+              <input
+                id="correo"
+                type="email"
+                placeholder="Pon tu correo aquí"
+                required
+              />
+
+              <label htmlFor="asunto">Mensaje</label>
+              <textarea
+                id="asunto"
+                placeholder="Escribe tu mensaje aquí..."
+                required
+              ></textarea>
+
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+
+          <img src={malabares} alt="malabares" />
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  )
 }
 
 export default Contacto

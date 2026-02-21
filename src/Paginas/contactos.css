@@ -78,6 +78,43 @@ main {
   border: 3px solid magenta;
   box-shadow: 0 0 15px magenta;
 }
+/* Popup con degradado */
+.mi-popup {
+  background: linear-gradient(135deg, cyan, magenta);
+  border-radius: 20px;
+  color: white;
+}
+
+/* Botón confirmar */
+.mi-boton-confirmar {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.mi-boton-confirmar:hover {
+  transform: scale(1.05);
+}
+
+/* Botón cancelar */
+.mi-boton-cancelar {
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.mi-boton-cancelar:hover {
+  transform: scale(1.05);
+}
 
 @media (max-width: 700px) {
   .intermedio {

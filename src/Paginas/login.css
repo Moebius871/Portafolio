@@ -1,24 +1,82 @@
 
+/* CONTENEDOR PRINCIPAL */
 .login-contenedor {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
   background: linear-gradient(135deg, cyan, magenta);
   font-family: 'Courier New', Courier, monospace;
 }
 
+/* CAJA LOGIN */
 .login-caja {
   background-color: cyan;
-  border: 4px solid cyan;
   padding: 40px;
-  box-shadow: 0 0 15px magenta;
+  border: 5px solid magenta;
+  box-shadow: 0 0 20px magenta;
+  width: 350px;
   text-align: center;
-  width: 300px;
 }
 
+/* TITULO */
 .login-caja h1 {
-  color: magenta;
+  margin-bottom: 30px;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+}
+
+/* FORMULARIO */
+.login-caja form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* LABELS */
+.login-caja label {
+  font-weight: bold;
+}
+
+/* INPUTS */
+.login-caja input {
+  padding: 10px;
+  border: 3px solid magenta;
+  background-color: black;
+  color: cyan;
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.login-caja input:focus {
+  box-shadow: 0 0 10px cyan;
+  border-color: cyan;
+}
+
+/* BOTÓN */
+.login-caja button {
+  margin-top: 10px;
+  padding: 12px;
+  border: 2px solid cyan;
+  background-color: magenta;
+  color: cyan;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-caja button:hover {
+  background-color: cyan;
+  color: magenta;
+  box-shadow: 0 0 15px cyan;
+  transform: scale(1.05);
+}
+
+/* ERRORES */
+.error {
+  color: red;
+  font-size: 0.8rem;
 }

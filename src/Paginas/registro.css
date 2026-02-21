@@ -1,64 +1,96 @@
-
 .registro-contenedor {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
   background: linear-gradient(135deg, cyan, magenta);
   font-family: 'Courier New', Courier, monospace;
 }
 
 .registro-formulario {
   background-color: cyan;
-  border: 4px solid magenta;
-  padding: 30px 40px;
-  box-shadow: 0 0 15px cyan;
-  width: 350px;
+  padding: 40px;
+  border: 5px solid magenta;
+  box-shadow: 0 0 20px magenta;
+  width: 400px;
   text-align: center;
 }
 
 .registro-formulario h2 {
-  color: magenta;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.registro-formulario label {
-  color: magenta;
-  font-weight: bold;
+.registro-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .registro-formulario input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 2px solid cyan;
+  padding: 10px;
+  border: 3px solid magenta;
   background-color: black;
   color: cyan;
-  font-family: inherit;
+  outline: none;
+  transition: 0.3s ease;
 }
 
 .registro-formulario input:focus {
-  outline: none;
   box-shadow: 0 0 10px cyan;
+  border-color: cyan;
 }
 
 .registro-formulario button {
-  background-color: magenta;
-  color: black;
+  padding: 12px;
   border: 2px solid cyan;
-  padding: 10px 20px;
+  background-color: magenta;
+  color: cyan;
   font-weight: bold;
-  cursor: pointer;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .registro-formulario button:hover {
   background-color: cyan;
   color: magenta;
-  box-shadow: 0 0 12px cyan;
+  box-shadow: 0 0 15px cyan;
   transform: scale(1.05);
+}
+.alerta-neon {
+  background: linear-gradient(135deg, cyan, magenta) !important;
+  border: 5px solid magenta !important;
+  border-radius: 0 !important;
+  box-shadow: 0 0 25px cyan !important;
+  font-family: 'Courier New', Courier, monospace !important;
+  color: black !important;
+}
+
+.alerta-titulo {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.alerta-texto {
+  font-size: 1rem;
+}
+
+.alerta-boton {
+  border: 2px solid cyan !important;
+  background-color: magenta !important;
+  color: cyan !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  padding: 10px 20px !important;
+  transition: all 0.3s ease;
+}
+
+.alerta-boton:hover {
+  background-color: cyan !important;
+  color: magenta !important;
+  box-shadow: 0 0 15px cyan !important;
+  transform: scale(1.08);
 }

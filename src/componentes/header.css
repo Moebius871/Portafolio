@@ -62,6 +62,12 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
+.titulo_3 a:hover {
+  background-color: cyan;
+  color: magenta;
+  box-shadow: 0 0 12px cyan;
+  transform: scale(1.08);
+}
 
 .pata {
   display: flex;
