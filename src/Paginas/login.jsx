@@ -35,7 +35,7 @@ function Login() {
         buttonsStyling: false,
         confirmButtonText: "Entrar"
       }).then(() => {
-        navigate("/")
+        navigate("/baseproyectos")
       })
 
     } else {

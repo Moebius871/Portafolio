@@ -1,0 +1,126 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(135deg, cyan, magenta);
+  font-family: 'Courier New', Courier, monospace;
+}
+.formulario {
+  background-color: magenta;
+  padding: 30px;
+  border: 3px solid cyan;
+  max-width: 420px;
+  width: 100%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.formulario label {
+  font-weight: bold;
+  color: #2f3640;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 10px;
+  border: 2px solid cyan;
+  background-color: white;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #2f3640;
+  box-shadow: 0 0 5px cyan;
+}
+
+.formulario textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.formulario input[type="file"] {
+  padding: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.formulario button {
+  margin-top: 10px;
+  background-color: cyan;
+  color: magenta;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: magenta;
+  color: cyan;
+  border: 2px solid cyan;
+}
+.proyectos-lista {
+  margin: 60px auto;
+  max-width: 1000px;
+  padding: 30px;
+  background-color: magenta;
+  border: 3px solid cyan;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.proyectos-lista h1 {
+  margin-bottom: 20px;
+  color: #2f3640;
+  text-align: center;
+}
+
+.proyectos-lista table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.proyectos-lista th {
+  background-color: cyan;
+  color: black;
+  padding: 12px;
+  border: 2px solid magenta;
+  text-align: left;
+}
+
+.proyectos-lista td {
+  padding: 12px;
+  border: 2px solid cyan;
+  color: #2f3640;
+}
+
+.proyectos-lista tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.proyectos-lista tbody tr:hover {
+  background-color: #e0ffff;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .formulario {
+    padding: 20px;
+  .proyectos-lista {
+    padding: 15px;
+  }
+
+  .proyectos-lista table {
+    font-size: 14px;
+  }
+}
+}

@@ -29,14 +29,14 @@ main img {
   box-shadow: 0 0 15px cyan;
 }
 
-.paneles {
+.proyectos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
 
-.panel {
+.proyecto {
   background-color: magenta;
   border: 3px solid cyan;
   padding: 25px;
@@ -45,7 +45,7 @@ main img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.panel:hover {
+.proyecto:hover {
   transform: translateY(-8px);
   box-shadow: 0 0 15px magenta;
 }

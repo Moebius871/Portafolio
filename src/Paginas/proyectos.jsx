@@ -1,33 +1,24 @@
 import Header from '../componentes/header'
 import Footer from '../componentes/footer'
 import './proyectos.css'
-import uno from '../assets/imagenes/1.png';
 import callaogil from '../assets/gifs/cuatro.gif';
+import Header2 from '../componentes/header2';
+import Sidebar from '../componentes/sidebar';
 function Proyectos() {
     return (
         <>
             <Header/>
-
+            <header2/>
+            <sidebar/>
             <main>
                 <section className="intro">
                     <h2>Mis Proyectos</h2>
                     <p>Aquí puedes ver algunos de los proyectos en los que he trabajado.</p>
                 </section>
                 <img src={callaogil} alt="callaogil"/>
-                <section className="paneles">
-                    <div className="panel">
-                        <h3>Proyecto 1</h3>
-                        <img src={uno} alt="Proyecto 1"/>
-                    </div>
-
-                    <div className="panel">
-                        <h3>Proyecto 2</h3>
-                        <p>.</p>
-                    </div>
-
-                    <div className="panel">
-                        <h3>Proyecto 3</h3>
-                        <p>.</p>
+                <section className="proyectos">
+                    <div className="proyecto">
+                    
                     </div>
                 </section>
             </main>
