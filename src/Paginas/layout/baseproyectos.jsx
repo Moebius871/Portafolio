@@ -38,8 +38,8 @@ function Baseproyectos() {
               />
                 <input
                 id="imagen"
-                type="file"
-                placeholder="Pon tu imagen aquí..."
+                type="text"
+                placeholder="Pon el enlace de tu imagen aquí..."
                 required
                 {...register("imagen", { required: true })}
               />
