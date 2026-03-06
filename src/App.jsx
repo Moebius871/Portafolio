@@ -1,13 +1,13 @@
 import React from 'react'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import Principal from './Paginas/principal.jsx'
-import Contacto from "./Paginas/contactos"
-import Proyectos from "./Paginas/proyectos.jsx"
-import Portafolio from './Paginas/portafolio.jsx'
-import Registro from './Paginas/registro.jsx'
-import Login from './Paginas/login.jsx'
-import Baseproyectos from './Paginas/layout/baseproyectos.jsx'
+import Principal from './paginas/principal.jsx'
+import Contacto from "./paginas/contactos"
+import Proyectos from "./paginas/proyectos.jsx"
+import Portafolio from './paginas/portafolio.jsx'
+import Registro from './paginas/registro.jsx'
+import Login from './paginas/login.jsx'
+import Baseproyectos from './paginas/layouts/baseproyectos.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom' 
 
 function App() {
