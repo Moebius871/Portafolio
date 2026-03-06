@@ -1,0 +1,155 @@
+html, body{
+height:100%;
+margin:0;
+}
+
+body{
+background:linear-gradient(135deg,cyan,magenta);
+font-family:'Courier New', Courier, monospace;
+}
+
+
+.contenedor{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+
+.form-card{
+background:magenta;
+border:3px solid cyan;
+padding:25px;
+margin-bottom:40px;
+}
+
+.form-card h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+
+.formulario{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.formulario input,
+.formulario textarea{
+padding:10px;
+border:2px solid cyan;
+background:white;
+font-family:inherit;
+}
+
+.formulario input:focus,
+.formulario textarea:focus{
+outline:none;
+box-shadow:0 0 6px cyan;
+}
+
+.botones-form{
+display:flex;
+gap:10px;
+}
+
+.btn-guardar{
+background:cyan;
+color:magenta;
+border:none;
+padding:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.btn-cancelar{
+background:#333;
+color:white;
+border:none;
+padding:10px;
+cursor:pointer;
+}
+
+
+.proyectos-lista{
+background:magenta;
+border:3px solid cyan;
+padding:25px;
+}
+
+.proyectos-lista h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+}
+
+th{
+background:cyan;
+padding:12px;
+border:2px solid magenta;
+}
+
+td{
+padding:10px;
+border:2px solid cyan;
+}
+
+
+.img-proyecto{
+width:120px;
+height:80px;
+object-fit:cover;
+border:2px solid magenta;
+}
+
+
+.link-github{
+color:magenta;
+font-weight:bold;
+}
+
+
+.acciones{
+display:flex;
+gap:8px;
+}
+
+.btn-editar{
+background:#3498db;
+border:none;
+color:white;
+padding:6px 10px;
+cursor:pointer;
+}
+
+.btn-eliminar{
+background:#e74c3c;
+border:none;
+color:white;
+padding:6px 10px;
+cursor:pointer;
+}
+
+.descripcion{
+max-width:250px;
+}
+
+
+@media(max-width:768px){
+
+table{
+font-size:14px;
+}
+
+.img-proyecto{
+width:90px;
+height:60px;
+}
+
+}

@@ -2,13 +2,11 @@ import Header from '../componentes/header'
 import Footer from '../componentes/footer'
 import './proyectos.css'
 import callaogil from '../assets/gifs/cuatro.gif';
-import Header2 from '../componentes/header2';
 import Sidebar from '../componentes/sidebar';
 function Proyectos() {
     return (
         <>
             <Header/>
-            <header2/>
             <sidebar/>
             <main>
                 <section className="intro">

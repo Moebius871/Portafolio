@@ -18,7 +18,9 @@ const { usuario, logout } = useContext(AuthContext);
             <li><Link to="/portafolio">Portafolio</Link></li>
             <li><Link to="/proyectos">Mis Proyectos</Link></li>
             <li><Link to="/contacto">Contactos</Link></li>
-            <Link to="/registro">Iniciar Sesion / Registrarse</Link>
+            <li><Link to="/baseproyectos">Proyectos</Link></li>
+            <li><Link to="/login">Iniciar Sesión</Link></li>
+            <li><Link to="/registro">Registrarse</Link></li>
           </ul>
       </nav>
       <nav className='titulo_3'>
@@ -27,9 +29,7 @@ const { usuario, logout } = useContext(AuthContext);
         <span>Hola, {usuario}</span>
         <button onClick={logout}>Salir</button>
         </>
-        ) : (
-        <Link to="/login">Iniciar Sesión</Link>
-        )}
+        ) : null}
         </nav>
       </div>
     </>
