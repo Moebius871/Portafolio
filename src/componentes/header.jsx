@@ -18,7 +18,6 @@ const { usuario, logout } = useContext(AuthContext);
             <li><Link to="/portafolio">Portafolio</Link></li>
             <li><Link to="/proyectos">Mis Proyectos</Link></li>
             <li><Link to="/contacto">Contactos</Link></li>
-            <li><Link to="/baseproyectos">Proyectos</Link></li>
             <li><Link to="/login">Iniciar Sesión</Link></li>
             <li><Link to="/registro">Registrarse</Link></li>
           </ul>

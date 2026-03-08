@@ -1,14 +1,13 @@
-import { useContext } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import Swal from "sweetalert2"
 import "sweetalert2/dist/sweetalert2.min.css"
 import "./registro.css"
 import { AuthContext } from "../context/AuthContext"
+import { registrarUsuario } from "../Services/authService";
 
 function Registro() {
 
-  const { login } = useContext(AuthContext)
   const navigate = useNavigate()
 
   const {
@@ -17,33 +16,36 @@ function Registro() {
     formState: { errors }
   } = useForm()
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
 
-    login(data.nombre)
+  try {
+
+    await registrarUsuario(data.email, data.password);
 
     Swal.fire({
-  title: "Registro completado (・ω<)",
-  text: `Bienvenido`,
-  width: 600,
-  padding: "2.5em",
-  backdrop: `
-    rgba(0,0,0,0.4)
-    url("src/assets/gifs/plush-reze.gif")
-    left top
-    no-repeat
-  `,
-  confirmButtonText: "Ir a Login",
-  customClass: {
-    popup: "alerta-neon",
-    title: "alerta-titulo",
-    htmlContainer: "alerta-texto",
-    confirmButton: "alerta-boton"
-  },
-  buttonsStyling: false
-  }).then(() => {
-  navigate("/login")
-  })
+      title: "Registro completado (・ω<)",
+      text: "Cuenta creada correctamente",
+      confirmButtonText: "Ir a Login",
+      customClass: {
+        popup: "alerta-neon",
+        confirmButton: "alerta-boton"
+      },
+      buttonsStyling: false
+    }).then(() => {
+      navigate("/login")
+    });
+
+  } catch (error) {
+
+    Swal.fire({
+      title: "Error",
+      text: error.message,
+      confirmButtonText: "Intentar otra vez"
+    });
+
   }
+
+}
 
   return (
     <div className="registro-contenedor">
@@ -90,7 +92,7 @@ function Registro() {
           <button type="submit">Registrarse</button>
 
           <p>
-            ¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link>
+            ¿Ya tienes cuenta? <Link to="/baseproyectos">Inicia sesión</Link>
           </p>
 
         </form>

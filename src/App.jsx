@@ -5,8 +5,8 @@ import Principal from './paginas/principal.jsx'
 import Contacto from "./paginas/contactos"
 import Proyectos from "./paginas/proyectos.jsx"
 import Portafolio from './paginas/portafolio.jsx'
-import Registro from './paginas/registro.jsx'
-import Login from './paginas/login.jsx'
+import Registro from './Paginas/registro.jsx'
+import Login from './Paginas/login.jsx'
 import Baseproyectos from './paginas/layouts/baseproyectos.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom' 
 
@@ -25,7 +25,7 @@ function App() {
         <Route path='/contacto' element={<Contacto/>} />
         <Route path='/registro' element={<Registro/>} />
         <Route path='/login' element={<Login/>} />
-        <Route path='/baseproyectos' element={<Baseproyectos/>} />
+        <Route path="/baseproyectos" element={<PrivateRoute><Baseproyectos /></PrivateRoute>}/>
       </Routes>
     </BrowserRouter>
     </>
